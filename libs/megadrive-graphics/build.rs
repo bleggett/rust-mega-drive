@@ -2,10 +2,6 @@ use std::process::Command;
 
 fn main() {
     Command::new("python3")
-        .args(&["-m", "pip", "install", "--user", "pipenv"])
-        .status()
-        .unwrap();
-    Command::new("python3")
         .args(&["-m", "pipenv", "install"])
         .status()
         .unwrap();
